@@ -22,7 +22,7 @@ class ListServiceImplementation: ListService {
     }()
     
     func getItems() throws -> [Items] {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Items")
         
         do {
             let result = try managedContext.fetch(fetchRequest)
@@ -33,27 +33,27 @@ class ListServiceImplementation: ListService {
                 return []
             }
         } catch {
-            print("Couldn't get titles")
+            print("Nao encontrado o item")
             return []
         }
     }
     
     func addItems(text: String) throws -> Items {
-        let title = NSEntityDescription.insertNewObject(forEntityName: "Title", into: managedContext) as! Items
+        let title = NSEntityDescription.insertNewObject(forEntityName: "Items", into: managedContext) as! Items
         title.text = text
         title.id = UUID().uuidString
         
         do {
             try managedContext.save()
         } catch {
-            print("Couldn't add a title")
+            print("Nao pode adicionar item")
         }
         
         return title
     }
     
     func deleteItem(with id: String) throws {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Items")
         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
         
         do {
@@ -76,7 +76,7 @@ class ListServiceImplementation: ListService {
     func getItem(with id: String) throws -> Items? {
         let predicate = NSPredicate(format: "id = %@", id)
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Items")
         fetchRequest.predicate = predicate
         
         do {
@@ -86,7 +86,7 @@ class ListServiceImplementation: ListService {
                 return title
             }
         } catch {
-            print("Couldn't get title")
+            print("nao encontrado")
         }
         
         return nil
