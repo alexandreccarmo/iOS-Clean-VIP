@@ -30,7 +30,7 @@ class ListView: UIView {
        lazy var placeholderTextLabel: UILabel = {
            let label = UILabel()
            label.font = UIFont(name: "Avenir-Heavy", size: 25)
-           label.text = "Nenhum item adicionado"
+           label.text = "Nenhum item adicionado!"
            label.textColor = .darkGray
            label.translatesAutoresizingMaskIntoConstraints = false
            return label

@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B828E18-32C3-42EF-845E-A7056448E40D"
+            uuid = "65328632-B880-4E1C-A684-67060AACAFBE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanVIP/List/ListConfigurator.swift"
+            filePath = "CleanVIP/List/ListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "configureModule(viewController:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84FD2CE5-D543-4B7F-ABCA-1251DDBD3BB5"
+            uuid = "0BDC24AF-12DA-4E4E-9FB5-66B0D44A6C56"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanVIP/List/ListConfigurator.swift"
+            filePath = "CleanVIP/List/ListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "configureModule(viewController:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "showPlaceHolder()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
