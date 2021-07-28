@@ -8,18 +8,18 @@
 import Foundation
 class ItemDetailConfigurator {
 
-    static func configureModule(titleId: String, viewController: ItemDetailViewController) {
-//            let view = TitleDetailView()
-//            let interactor = TitleDetailInteractorImplementation()
-//            let presenter = TitleDetailPresenterImplementation()
-            
-//            interactor.titleId = titleId
-//
-//            viewController.titleDetailView = view
-//            viewController.interactor = interactor
-//
-//            interactor.presenter = presenter
-            
-//            presenter.viewController = viewController
-        }
+    static func configureModule(itemId: String, viewController: ItemDetailViewController) {
+        let view = ItemDetailView()
+        let interactor = ItemDetailInteractorImplamentation()
+        let presenter = ItemDetailPresenterImplementation()
+        
+        interactor.itemId = itemId
+
+        viewController.itemDetailView = view
+        viewController.interactor = interactor
+
+        interactor.presenter = presenter
+        
+        presenter.viewController = viewController
+    }
 }

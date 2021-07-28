@@ -15,7 +15,7 @@ protocol ItemDetailInteractor: AnyObject {
 
 class ItemDetailInteractorImplamentation: ItemDetailInteractor {
     var itemId: String?
-    var presenter: itemDetailPresenter?
+    var presenter: ItemDetailPresenter?
     private let itemService = ListServiceImplementation()
     
     func viewDidLoad() {

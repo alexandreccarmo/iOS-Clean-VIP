@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol itemDetailPresenter: AnyObject {
+protocol ItemDetailPresenter: AnyObject {
     func interactor(didRetrieveItem item: Items)
     func interactor(didFailRetrieveItem error: Error)
 }
 
 
-class itemDetailPresenterImplementation: itemDetailPresenter {
+class ItemDetailPresenterImplementation: ItemDetailPresenter {
     
     var viewController: ItemDetailPresenterOutput?
     

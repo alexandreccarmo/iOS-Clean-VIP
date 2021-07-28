@@ -21,7 +21,7 @@ class ListRouterImplementation: ListRouter {
     func routeToDetail(with id: String) {
         
         let viewController = ItemDetailViewController()
-        ItemDetailConfigurator.configureModule(titleId: id, viewController: viewController)
+        ItemDetailConfigurator.configureModule(itemId: id, viewController: viewController)
                
         navigationController?.pushViewController(viewController, animated: true)
     }

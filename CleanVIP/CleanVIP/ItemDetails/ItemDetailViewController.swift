@@ -17,8 +17,8 @@ protocol ItemDetailPresenterOutput: AnyObject {
 class ItemDetailViewController: UIViewController {
     
     var itemDetailView: ItemDetailView?
-//    var interactor: TitleDetailInteractor?
-//    weak var presenter: TitleDetailPresenter?
+    var interactor: ItemDetailInteractor?
+    weak var presenter: ItemDetailPresenter?
     
     override func loadView() {
         super.loadView()
@@ -28,7 +28,7 @@ class ItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.interactor?.viewDidLoad()
     }
 }
 
